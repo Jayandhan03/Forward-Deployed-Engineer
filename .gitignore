@@ -1,0 +1,65 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.Python
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+.tox/
+.ipynb_checkpoints/
+
+# ---- Node / frontend ----
+node_modules/
+.next/
+out/
+.turbo/
+.svelte-kit/
+*.tsbuildinfo
+.pnpm-store/
+.vercel/
+.cache/
+
+# ---- Env & secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+
+# ---- Terraform ----
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!example.tfvars
+
+# ---- Docker ----
+docker-compose.override.yml
+
+# ---- IDE / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Logs / local data ----
+*.log
+logs/
+tmp/
+*.local
+
+# Keep the roadmap PDF out of diffs but tracked once if you want it — comment the next line to commit it
+# Skill-Stack.pdf

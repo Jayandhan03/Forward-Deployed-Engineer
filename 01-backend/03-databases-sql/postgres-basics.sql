@@ -1,0 +1,2 @@
+-- PostgreSQL basics
+-- Stub - add DDL / queries as you learn.
