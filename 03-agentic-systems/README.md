@@ -11,6 +11,8 @@ tools that touch the real world, and can loop forever or burn money if you let i
 
 ## 00-agent-foundations
 
+→ **Study order + topic folders:** [00-agent-foundations/README.md](00-agent-foundations/README.md)
+
 - [ ] The agent loop — reason → act → observe → repeat; stop conditions
 - [ ] Tool design — narrow, well‑described, safe‑by‑default; input/output schemas; errors as data
 - [ ] Planning strategies — react vs plan‑then‑execute vs decomposition; when each fits
@@ -18,6 +20,8 @@ tools that touch the real world, and can loop forever or burn money if you let i
 - [ ] Context & state management — assembling the window each turn; run state as a first‑class object
 
 ## 01-orchestration
+
+→ **Study order + topic folders:** [01-orchestration/README.md](01-orchestration/README.md)
 
 - [ ] Single‑agent workflow — one loop, a toolset, a budget
 - [ ] Multi‑agent patterns — supervisor/worker, pipeline, debate; the cost of coordination
@@ -27,12 +31,16 @@ tools that touch the real world, and can loop forever or burn money if you let i
 
 ## 02-human-in-the-loop
 
+→ **Study order + topic folders:** [02-human-in-the-loop/README.md](02-human-in-the-loop/README.md)
+
 - [ ] Approval gates — pause before irreversible/expensive actions
 - [ ] Interrupts & resume — durable pause, external input, continue from state
 - [ ] Review queues — surface agent actions for human sign‑off
 - [ ] Feedback capture — thumbs / edits / corrections wired back into evals
 
 ## 03-reliability
+
+→ **Study order + topic folders:** [03-reliability/README.md](03-reliability/README.md)
 
 - [ ] Guardrails & output validation — schema checks, allow/deny lists, content filters
 - [ ] Timeouts, retries, circuit breakers — per tool and per run
@@ -42,6 +50,8 @@ tools that touch the real world, and can loop forever or burn money if you let i
 
 ## 04-observability
 
+→ **Study order + topic folders:** [04-observability/README.md](04-observability/README.md)
+
 - [ ] Tracing agent runs — one trace per run, spans per step/tool call
 - [ ] Step & span logging — inputs, outputs, tokens, cost, latency at each hop
 - [ ] Replay & debugging — reconstruct a run from its trace
@@ -50,13 +60,27 @@ tools that touch the real world, and can loop forever or burn money if you let i
 
 ## 05-deployment
 
+→ **Study order + topic folders:** [05-deployment/README.md](05-deployment/README.md)
+
 - [ ] Stateful vs stateless agents — where run state lives
 - [ ] Queue‑backed agent workers — enqueue run → worker executes → stream results out
 - [ ] Streaming results to the client — SSE/WebSocket, partial output, cancel
 - [ ] Session & run storage — schema for runs, steps, messages, artifacts
 - [ ] Scaling agents — concurrency limits, provider rate limits, backpressure, cost ceilings
 
+## 07-enterprise-and-governance
+
+→ **Study order + topic folders:** [07-enterprise-and-governance/README.md](07-enterprise-and-governance/README.md)
+
+- [ ] Enterprise agent architecture — gateways, registry, tenant isolation, MCP in the enterprise
+- [ ] Identity & access — agent identity, on‑behalf‑of, least privilege, short‑lived scoped tokens
+- [ ] Policy & guardrails — policy as code, risk‑classed actions, PII redaction, taint tracking
+- [ ] Audit & accountability — tamper‑evident logs, versioning, owners, incident process
+- [ ] Risk & regulation — EU AI Act tiers, NIST AI RMF, ISO 42001, go‑live checklist
+
 ## 06-reference-architecture
+
+→ **Study order + topic folders:** [06-reference-architecture/README.md](06-reference-architecture/README.md)
 
 The deliverable. Write these as real documents (Markdown + diagrams committed alongside):
 
