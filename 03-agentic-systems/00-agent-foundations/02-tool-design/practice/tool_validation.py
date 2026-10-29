@@ -36,7 +36,8 @@ def validate(args: dict, schema: dict) -> list[str]:
             errors.append(f"unknown field '{name}' (allowed: {', '.join(props)})")
             continue
         p = props[name]
-        if not isinstance(value, TYPES[p["type"]]):
+        # bool is a subclass of int in Python, so True would otherwise pass as an integer
+        if not isinstance(value, TYPES[p["type"]]) or (isinstance(value, bool) and p["type"] != "boolean"):
             errors.append(f"'{name}' must be {p['type']}, got {type(value).__name__}")
         elif "enum" in p and value not in p["enum"]:
             errors.append(f"'{name}' must be one of {p['enum']}, got '{value}'")
@@ -63,5 +64,6 @@ if __name__ == "__main__":
         {"title": "Login broken", "priority": "urgent"},
         {"priority": "low", "colour": "red"},
         {"title": 123, "priority": "low"},
+        {"title": True, "priority": "low"},
     ]:
         print(args, "\n  ->", execute(args))

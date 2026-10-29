@@ -27,8 +27,9 @@ class LoopGuard:
             return "kill switch"
         if self.steps > self.max_steps:
             return f"max steps ({self.max_steps})"
-        self.calls[(tool, repr(sorted(args.items())))] += 1
-        if self.calls[(tool, repr(sorted(args.items())))] > self.max_repeats:
+        key = (tool, repr(sorted(args.items())))
+        self.calls[key] += 1
+        if self.calls[key] > self.max_repeats:
             return f"repeated identical call to {tool}"
         if result is not None:
             self.recent_results.append(result)
